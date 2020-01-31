@@ -17,4 +17,10 @@ function array_diff(a, b) {
       }
     }
     return a
-  }
+}
+
+function array_diff(a, b) {
+    // if(a.length == 0) return [];
+    // if(b.length == 0) return a;
+    return a.filter((i)=>(!b.includes(i)));
+}
