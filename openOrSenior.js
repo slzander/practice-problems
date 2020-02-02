@@ -15,3 +15,14 @@
 // Example Output
 // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
+function openOrSenior(data){
+    let newArray = []
+    data.map(member => {
+      if(member[0] >= 55 && member[1] > 7){
+        newArray.push('Senior')
+      } else {
+        newArray.push('Open')
+      }
+    })
+    return newArray
+  }
