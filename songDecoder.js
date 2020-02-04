@@ -31,3 +31,10 @@ function songDecoder(song){
     }
     return song
   }
+
+
+//   another solution:
+
+//   function songDecoder(song){
+//     return song.replace(/(WUB)+/g," ").trim()
+//   }
