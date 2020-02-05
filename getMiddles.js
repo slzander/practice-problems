@@ -18,5 +18,19 @@
 // The middle character(s) of the word represented as a string.
 
 function getMiddle(s){
-    
+    if(s.length % 2 !== 0){
+        return s[Math.floor(s.length / 2)]
+    } else if (s.length == 1){
+        return s
+    } else {
+        return s[(s.length / 2) - 1] + s[(s.length / 2)]
+    }
 }
+
+
+
+function getMiddle(s)
+{
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
+
