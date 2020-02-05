@@ -5,6 +5,14 @@
 
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 
-function toCamelCase(str){
-
+function toCamelCase(str) {
+    if (str.includes('_') || str.includes('-')) {
+        let array = str.split(/_|-/)
+        for (i = 1; i < array.length; i++) {
+            array[i] = array[i][0].toUpperCase() + array[i].slice(1)
+        }
+        return array.join('')
+    } else {
+        return str
+    }
 }
