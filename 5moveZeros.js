@@ -2,7 +2,8 @@
 
 // moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
 
-
 var moveZeros = function (arr) {
-    // TODO: Program me
-  }
+  let newArray = arr.filter(element => element !== 0)
+  let zeroArray = arr.filter(element => element === 0)
+  return [...newArray, ...zeroArray]
+}
