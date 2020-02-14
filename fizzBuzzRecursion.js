@@ -5,5 +5,33 @@
 // solve both with and without recursion!
 
 function fizzBuzz(){
-    
+    for(i=1; i<=100; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log('FizzBuzz')
+        } else if (i % 3 === 0){
+            console.log('Fizz')
+        } else if (i % 5 === 0){
+            console.log('Buzz')
+        } else {
+            console.log(i)
+        }
+    }
+}
+
+function recursiveFizzBuzz(n){
+    if(n <= 100){
+        if(n % 3 === 0 && n % 5 === 0){
+            console.log('FizzBuzz')
+            recursiveFizzBuzz(n+1)
+        } else if (n % 3 === 0){
+            console.log('Fizz')
+            recursiveFizzBuzz(n+1)
+        } else if (n % 5 === 0){
+            console.log('Buzz')
+            recursiveFizzBuzz(n+1)
+        } else {
+            console.log(n)
+            recursiveFizzBuzz(n+1)
+        }
+    }
 }
